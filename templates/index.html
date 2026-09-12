@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>A Little Something ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- Floating background emojis -->
+
+<div class="background-hearts">
+
+    <span>❤️</span>
+    <span>🥺</span>
+    <span>💕</span>
+    <span>🫶</span>
+    <span>🌸</span>
+
+</div>
+
+
+
+<main class="container">
+
+
+    <!-- =====================================
+         HOME
+    ====================================== -->
+
+    <section
+        id="homeScreen"
+        class="screen active"
+    >
+
+        <div class="hero">
+
+            <div class="logo">
+                💌
+            </div>
+
+
+            <p class="eyebrow">
+               Shital 💕🫶 - Just something I wanted to say
+            </p>
+
+
+            <h1>
+
+                I should have
+                <span>listened.</span>
+
+            </h1>
+
+
+            <p class="subtitle">
+
+                Pick a card.<br>
+                I think I owe you a proper apology. 🥺
+
+            </p>
+
+        </div>
+
+
+
+        <h2>
+            Maybe this one says it better...
+        </h2>
+
+
+
+        <div class="cards">
+
+
+            <!-- CARD 1 -->
+
+            <button
+                class="apology-card"
+                data-type="listen"
+            >
+
+                <div class="emoji">
+                    🥺
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        I Should Have Listened
+                    </h3>
+
+                    <p>
+                        You were trying to tell me something...
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+
+
+            <!-- CARD 2 -->
+
+            <button
+                class="apology-card"
+                data-type="dismissed"
+            >
+
+                <div class="emoji">
+                    😔
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        I Dismissed You
+                    </h3>
+
+                    <p>
+                        "Everyone has to do this" wasn't the answer...
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+
+
+            <!-- CARD 3 -->
+
+            <button
+                class="apology-card"
+                data-type="lesson"
+            >
+
+                <div class="emoji">
+                    🫂
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        It Wasn't a Lesson for You
+                    </h3>
+
+                    <p>
+                        I don't want you to see it that way...
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+
+
+            <!-- CARD 4 -->
+
+            <button
+                class="apology-card"
+                data-type="understand"
+            >
+
+                <div class="emoji">
+                    🥹
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        I Get It Now
+                    </h3>
+
+                    <p>
+                        I understand why it bothered you...
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+
+
+            <!-- CARD 5 -->
+
+            <button
+                class="apology-card"
+                data-type="heart"
+            >
+
+                <div class="emoji">
+                    ❤️
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        From My Heart
+                    </h3>
+
+                    <p>
+                        Maybe the learning was actually for me...
+                    </p>
+
+                </div>
+
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =====================================
+         APOLOGY CARD
+    ====================================== -->
+
+    <section
+        id="resultScreen"
+        class="screen"
+    >
+
+
+        <button
+            class="back"
+            id="backButton"
+        >
+
+            ← Choose another
+
+        </button>
+
+
+
+        <div class="love-card">
+
+
+            <div
+                class="result-emoji"
+                id="resultEmoji"
+            >
+                🥺
+            </div>
+
+
+
+            <p class="card-label">
+                I wanted you to know this ❤️
+            </p>
+
+
+
+            <h1
+                id="resultTitle"
+            >
+                I Should Have Listened
+            </h1>
+
+
+
+            <div
+                class="message"
+                id="resultMessage"
+            >
+            </div>
+
+
+
+            <div class="divider">
+                ♡
+            </div>
+
+
+
+            <p class="question">
+
+                Can you accept my apology?
+
+            </p>
+
+
+
+            <div class="answer-buttons">
+
+
+                <button
+                    class="yes-button"
+                    id="yesButton"
+                >
+
+                    ❤️ Yes
+
+                </button>
+
+
+
+                <button
+                    class="no-button"
+                    id="noButton"
+                >
+
+                    🥺 Not yet
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =====================================
+         YES
+    ====================================== -->
+
+    <section
+        id="acceptedScreen"
+        class="screen"
+    >
+
+        <div class="response-card">
+
+
+            <div class="response-emoji">
+                🥹❤️
+            </div>
+
+
+            <h1>
+                Apology Accepted
+            </h1>
+
+
+            <p>
+                Thank you.
+            </p>
+
+
+            <p class="cute-text">
+
+                I'll try to remember this the next
+                time you tell me something.
+
+            </p>
+
+
+            <div class="big-heart">
+                ❤️
+            </div>
+
+
+            <p class="tiny-text">
+
+                And yes... I really should have
+                listened. 🫶
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =====================================
+         NO
+    ====================================== -->
+
+    <section
+        id="rejectedScreen"
+        class="screen"
+    >
+
+        <div class="response-card">
+
+
+            <div class="response-emoji">
+                🥺
+            </div>
+
+
+            <h1>
+                That's okay.
+            </h1>
+
+
+            <p>
+
+                You don't have to accept my apology
+                just because I said sorry.
+
+            </p>
+
+
+            <p class="cute-text">
+
+                I understand if you're still upset.
+
+            </p>
+
+
+            <div class="small-note">
+
+                <span>What I should have done:</span>
+
+                <strong>
+                    listened first.
+                </strong>
+
+            </div>
+
+
+            <button
+                class="try-button"
+                id="tryAgainButton"
+            >
+
+                ❤️ Read another
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+    © With Love, Darshan 🙂
+    </footer>
+
+
+</main>
+
+
+
+<script
+    src="{{ url_for('static', path='app.js') }}"
+></script>
+
+
+</body>
+
+</html>

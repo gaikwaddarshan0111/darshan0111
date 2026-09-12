@@ -1,0 +1,1003 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff5f7 0%,
+            #ffe9ee 48%,
+            #fff8f9 100%
+        );
+
+    color: #3b2930;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.container {
+
+    width: 100%;
+
+    max-width: 680px;
+
+    margin: auto;
+
+    padding:
+        42px
+        20px
+        80px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.screen {
+
+    display: none;
+
+    animation:
+        fadeIn
+        0.45s
+        ease;
+
+}
+
+
+.screen.active {
+
+    display: block;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =====================================
+   BACKGROUND
+===================================== */
+
+.background-hearts span {
+
+    position: fixed;
+
+    opacity: 0.14;
+
+    pointer-events: none;
+
+    animation:
+        float
+        7s
+        infinite
+        ease-in-out;
+
+}
+
+
+.background-hearts span:nth-child(1) {
+
+    left: 8%;
+
+    top: 15%;
+
+    font-size: 30px;
+
+}
+
+
+.background-hearts span:nth-child(2) {
+
+    right: 10%;
+
+    top: 27%;
+
+    font-size: 25px;
+
+}
+
+
+.background-hearts span:nth-child(3) {
+
+    left: 12%;
+
+    bottom: 20%;
+
+    font-size: 28px;
+
+}
+
+
+.background-hearts span:nth-child(4) {
+
+    right: 13%;
+
+    bottom: 15%;
+
+    font-size: 32px;
+
+}
+
+
+.background-hearts span:nth-child(5) {
+
+    left: 50%;
+
+    top: 8%;
+
+    font-size: 22px;
+
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-18px);
+
+    }
+
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 48px;
+
+}
+
+
+.logo {
+
+    width: 72px;
+
+    height: 72px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        0
+        auto
+        20px;
+
+    font-size: 36px;
+
+    box-shadow:
+        0
+        15px
+        45px
+        rgba(
+            150,
+            60,
+            80,
+            0.12
+        );
+
+}
+
+
+.eyebrow {
+
+    color: #a17d87;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            40px,
+            8vw,
+            60px
+        );
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+}
+
+
+.hero h1 span {
+
+    color: #e85d75;
+
+}
+
+
+.subtitle {
+
+    margin-top: 20px;
+
+    color: #866c75;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+
+}
+
+
+h2 {
+
+    font-size: 21px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =====================================
+   APOLOGY LIST
+===================================== */
+
+.cards {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+}
+
+
+.apology-card {
+
+    width: 100%;
+
+    border: none;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    border-radius: 21px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    gap: 16px;
+
+    box-shadow:
+        0
+        8px
+        30px
+        rgba(
+            120,
+            50,
+            70,
+            0.08
+        );
+
+    transition:
+        transform
+        0.2s ease,
+        box-shadow
+        0.2s ease;
+
+}
+
+
+.apology-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0
+        15px
+        38px
+        rgba(
+            120,
+            50,
+            70,
+            0.14
+        );
+
+}
+
+
+.apology-card:active {
+
+    transform:
+        scale(0.98);
+
+}
+
+
+.emoji {
+
+    width: 56px;
+
+    height: 56px;
+
+    background: #fff1f4;
+
+    border-radius: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 29px;
+
+    flex-shrink: 0;
+
+}
+
+
+.card-content {
+
+    flex: 1;
+
+}
+
+
+.apology-card h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+
+    color: #281d21;
+
+}
+
+
+.apology-card p {
+
+    color: #9a7c85;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+}
+
+
+.arrow {
+
+    font-size: 24px;
+
+    color: #d77f91;
+
+}
+
+
+/* =====================================
+   BACK BUTTON
+===================================== */
+
+.back {
+
+    background: none;
+
+    border: none;
+
+    color: #8d6670;
+
+    margin-bottom: 20px;
+
+    font-size: 15px;
+
+}
+
+
+/* =====================================
+   MAIN APOLOGY CARD
+===================================== */
+
+.love-card {
+
+    background: white;
+
+    border-radius: 32px;
+
+    padding:
+        48px
+        35px
+        38px;
+
+    text-align: center;
+
+    box-shadow:
+        0
+        25px
+        80px
+        rgba(
+            100,
+            40,
+            60,
+            0.13
+        );
+
+}
+
+
+.result-emoji {
+
+    font-size: 68px;
+
+    margin-bottom: 13px;
+
+    animation:
+        softBounce
+        2s
+        infinite;
+
+}
+
+
+@keyframes softBounce {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px);
+
+    }
+
+}
+
+
+.card-label {
+
+    color: #aa8992;
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.love-card h1 {
+
+    font-size: 34px;
+
+    color: #3b2830;
+
+    line-height: 1.2;
+
+}
+
+
+.message {
+
+    margin-top: 28px;
+
+    color: #604952;
+
+    font-size: 17px;
+
+    line-height: 1.85;
+
+    white-space: pre-line;
+
+}
+
+
+.divider {
+
+    color: #e85d75;
+
+    font-size: 25px;
+
+    margin:
+        28px
+        0;
+
+}
+
+
+.question {
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    margin-bottom: 17px;
+
+}
+
+
+/* =====================================
+   YES / NO
+===================================== */
+
+.answer-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.yes-button,
+.no-button {
+
+    flex: 1;
+
+    border: none;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    font-weight: 700;
+
+    transition:
+        transform
+        0.2s ease;
+
+}
+
+
+.yes-button {
+
+    background: #e85d75;
+
+    color: white;
+
+    box-shadow:
+        0
+        10px
+        25px
+        rgba(
+            232,
+            93,
+            117,
+            0.25
+        );
+
+}
+
+
+.no-button {
+
+    background: #fff0f3;
+
+    color: #c05269;
+
+}
+
+
+.yes-button:hover,
+.no-button:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =====================================
+   RESPONSE CARD
+===================================== */
+
+.response-card {
+
+    background: white;
+
+    border-radius: 32px;
+
+    padding:
+        55px
+        30px;
+
+    text-align: center;
+
+    box-shadow:
+        0
+        25px
+        80px
+        rgba(
+            100,
+            40,
+            60,
+            0.13
+        );
+
+}
+
+
+.response-emoji {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.response-card h1 {
+
+    font-size: 34px;
+
+    color: #3d2930;
+
+}
+
+
+.response-card p {
+
+    margin-top: 15px;
+
+    color: #806b72;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+
+}
+
+
+.cute-text {
+
+    color: #d95770 !important;
+
+    font-weight: 600;
+
+}
+
+
+.tiny-text {
+
+    font-size: 14px !important;
+
+    color: #aa8b94 !important;
+
+}
+
+
+.big-heart {
+
+    font-size: 75px;
+
+    margin-top: 30px;
+
+    animation:
+        heartbeat
+        1.1s
+        infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.2);
+
+    }
+
+}
+
+
+/* =====================================
+   NO RESPONSE
+===================================== */
+
+.small-note {
+
+    margin-top: 28px;
+
+    padding: 18px;
+
+    background: #fff4f6;
+
+    border-radius: 17px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.small-note span {
+
+    color: #9d7e87;
+
+    font-size: 13px;
+
+}
+
+
+.small-note strong {
+
+    color: #d95770;
+
+    font-size: 18px;
+
+}
+
+
+.try-button {
+
+    width: 100%;
+
+    border: none;
+
+    background: #e85d75;
+
+    color: white;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    margin-top: 28px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0
+        10px
+        25px
+        rgba(
+            232,
+            93,
+            117,
+            0.25
+        );
+
+}
+
+
+/* =====================================
+   FLOATING HEARTS
+===================================== */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    z-index: 999;
+
+    animation:
+        heartRise
+        4s
+        ease-out
+        forwards;
+
+    pointer-events: none;
+
+}
+
+
+@keyframes heartRise {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(25deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 500px) {
+
+    .container {
+
+        padding:
+            25px
+            15px
+            50px;
+
+    }
+
+
+    .hero {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .love-card {
+
+        padding:
+            40px
+            20px
+            30px;
+
+    }
+
+
+    .love-card h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .message {
+
+        font-size: 16px;
+
+        line-height: 1.75;
+
+    }
+
+
+    .answer-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .yes-button,
+    .no-button {
+
+        width: 100%;
+
+    }
+
+
+    .response-card {
+
+        padding:
+            45px
+            20px;
+
+    }
+
+
+    .response-card h1 {
+
+        font-size: 30px;
+
+    }
+
+}
+/* =====================================
+   FOOTER
+===================================== */
+.site-footer {
+    width: 100%;
+    text-align: center;
+
+    margin-top: 28px;
+    padding: 12px 0;
+
+    color: #9a7c85;
+
+    font-size: 13px;
+    letter-spacing: 0.2px;
+
+    opacity: 0.85;
+}
